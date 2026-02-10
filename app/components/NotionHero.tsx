@@ -122,34 +122,34 @@ export default function NotionHero({ onJoinBetaClick }: { onJoinBetaClick: () =>
       {/* Main hero content wrapper */}
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Animated character icons - Notion style */}
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white text-xl animate-float" style={{animationDelay: '0s'}}>📚</div>
-          <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white text-xl animate-float" style={{animationDelay: '0.2s'}}>👨‍💼</div>
-          <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-white text-xl animate-float" style={{animationDelay: '0.4s'}}>👩‍💻</div>
-          <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl animate-float" style={{animationDelay: '0.6s'}}>💡</div>
-          <div className="w-14 h-14 rounded-full bg-white border-4 border-gray-900 flex items-center justify-center text-2xl animate-float" style={{animationDelay: '0.8s'}}>🤖</div>
-          <div className="w-12 h-12 rounded-full bg-blue-400 flex items-center justify-center text-white text-xl animate-float" style={{animationDelay: '1s'}}>🎯</div>
-          <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white text-xl animate-float" style={{animationDelay: '1.2s'}}>👩‍🔧</div>
-          <div className="w-12 h-12 rounded-full bg-orange-400 flex items-center justify-center text-white text-xl animate-float" style={{animationDelay: '1.4s'}}>⚡</div>
-          <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-white text-xl animate-float" style={{animationDelay: '1.6s'}}>✓</div>
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 px-4">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500 flex items-center justify-center text-white text-lg sm:text-xl animate-float" style={{animationDelay: '0s'}}>📚</div>
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-800 flex items-center justify-center text-white text-lg sm:text-xl animate-float" style={{animationDelay: '0.2s'}}>👨‍💼</div>
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-700 flex items-center justify-center text-white text-lg sm:text-xl animate-float" style={{animationDelay: '0.4s'}}>👩‍💻</div>
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-lg sm:text-xl animate-float" style={{animationDelay: '0.6s'}}>💡</div>
+          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border-4 border-gray-900 flex items-center justify-center text-xl sm:text-2xl animate-float" style={{animationDelay: '0.8s'}}>🤖</div>
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-400 flex items-center justify-center text-white text-lg sm:text-xl animate-float" style={{animationDelay: '1s'}}>🎯</div>
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-800 flex items-center justify-center text-white text-lg sm:text-xl animate-float" style={{animationDelay: '1.2s'}}>👩‍🔧</div>
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-400 flex items-center justify-center text-white text-lg sm:text-xl animate-float" style={{animationDelay: '1.4s'}}>⚡</div>
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-yellow-400 flex items-center justify-center text-white text-lg sm:text-xl animate-float" style={{animationDelay: '1.6s'}}>✓</div>
         </div>
 
         {/* Headline - Notion style */}
-        <div className="text-center mb-8">
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold text-gray-700 leading-none mb-6 tracking-tight">
+        <div className="text-center mb-8 px-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-700 leading-tight sm:leading-tight md:leading-none mb-6 tracking-tight break-words">
             Your AI Twin.<br />
             Zero manual work.
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
             Selfnode runs your entire revenue workflow — sourcing high-intent opportunities, replicating your communication style, generating persuasive proposals, orchestrating outreach, filtering signal from noise, tracking performance, and continuously learning to improve outcomes.
           </p>
         </div>
 
         {/* CTA Buttons - Notion style */}
-        <div className="flex items-center justify-center gap-4 mb-12">
+        <div className="flex items-center justify-center gap-4 mb-12 px-4">
           <button
             onClick={onJoinBetaClick}
-            className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+            className="px-6 sm:px-10 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md text-sm sm:text-base"
           >
             Join Beta
           </button>

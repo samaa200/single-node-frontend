@@ -136,7 +136,7 @@ const WorkflowStep = ({ number, title, description, labels, children }: any) => 
       </div>
 
       {/* Content Side */}
-      <div className="md:col-span-5 md:pl-24 relative order-2 md:order-1">
+      <div className="md:col-span-5 md:pl-24 relative order-2 md:order-1 px-4 md:px-0">
         <motion.div
            initial={{ opacity: 0, x: -20 }}
            animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -148,8 +148,8 @@ const WorkflowStep = ({ number, title, description, labels, children }: any) => 
             </span>
           </div>
           
-          <h3 className="text-3xl font-bold text-[#0a2540] mb-6 tracking-tight">{title}</h3>
-          <p className="text-lg text-slate-500 leading-relaxed mb-8">{description}</p>
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#0a2540] mb-6 tracking-tight break-words">{title}</h3>
+          <p className="text-base sm:text-lg text-slate-500 leading-relaxed mb-8">{description}</p>
           
           <div className="flex flex-wrap gap-3">
             {labels.map((label: string, i: number) => (
