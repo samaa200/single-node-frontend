@@ -1,6 +1,23 @@
 'use client';
 
 import TypingCode  from './TypingCode';
+import { FaLinkedin, FaSlack, FaYahoo } from "react-icons/fa";
+import {
+  SiUpwork,
+  SiFiverr,
+  SiGmail,
+  SiNotion,
+} from "react-icons/si";
+
+const integrations = [
+  { Icon: FaLinkedin, color: "#0A66C2", name: "LinkedIn" },
+  { Icon: SiUpwork, color: "#14A800", name: "Upwork" },
+  { Icon: SiFiverr, color: "#1DBF73", name: "Fiverr" },
+  { Icon: SiGmail, color: "#EA4335", name: "Gmail" },
+  { Icon: FaSlack, color: "#4A154B", name: "Slack" },
+  { Icon: FaYahoo, color: "#6001D2", name: "Yahoo" },
+  { Icon: SiNotion, color: "#000000", name: "Notion" },
+];
 
 export default function NotionHero({ onJoinBetaClick }: { onJoinBetaClick: () => void }) {
  const codeLines = [
@@ -120,7 +137,7 @@ export default function NotionHero({ onJoinBetaClick }: { onJoinBetaClick: () =>
         {/* Headline - Notion style */}
         <div className="text-center mb-8">
           <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold text-gray-700 leading-none mb-6 tracking-tight">
-            Your AI clone.<br />
+            Your AI Twin.<br />
             Zero manual work.
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -164,51 +181,25 @@ export default function NotionHero({ onJoinBetaClick }: { onJoinBetaClick: () =>
         </div>
       </div>
 
-      {/* Trusted by section with independent sizing */}
-      <div className="w-full max-w-6xl mx-auto mt-20 text-center relative z-10 px-6">
-  {/* Subtitle with premium tracking */}
-  <p className="text-xs font-bold text-slate-400 mb-10 uppercase tracking-[0.2em]">
-    Powering modern teams at
-  </p>
-  
-  <div className="flex items-center justify-center gap-x-12 gap-y-8 flex-wrap opacity-50 grayscale hover:opacity-100 transition-all duration-700 ease-in-out">
-    
-    {/* LinkedIn */}
-    <svg className="h-7 text-slate-700 fill-current" viewBox="0 0 24 24">
-      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-    </svg>
+    <div className="w-full max-w-6xl mx-auto mt-20 text-center px-6">
+      {/* Subtitle */}
+      <p className="text-xs font-bold text-slate-400 mb-10 uppercase tracking-[0.2em]">
+        Powering modern teams at
+      </p>
 
-    {/* Upwork */}
-    <div className="flex items-center gap-1 text-slate-700">
-      <svg className="h-7 fill-current" viewBox="0 0 24 24">
-        <path d="M18.561 3.322c-2.542 0-4.162 1.441-5.03 3.696-1.012-1.446-1.722-3.022-2.104-4.22H8.583v6.161c0 1.525-1.238 2.763-2.763 2.763s-2.763-1.238-2.763-2.763V2.798H0v6.161c0 3.052 2.474 5.526 5.526 5.526 2.1 0 3.93-1.174 4.896-2.91.433 1.127 1.137 2.426 2.112 3.633l-2.302 9.094h3.13l1.625-6.41c.742.544 1.543.818 2.37.818 3.52 0 6.643-2.842 6.643-7.652s-3.052-7.746-6.439-7.746zm0 12.316c-.953 0-1.845-.394-2.53-1.108l.303-1.196c.214-1.446.753-3.084 1.581-4.266.39-.56.884-.91 1.432-.91 1.718 0 3.235 1.42 3.235 4.74s-1.42 4.74-4.02 4.74z"/>
-      </svg>
-      <span className="font-bold text-2xl tracking-tighter">Upwork</span>
+      {/* Logo row */}
+      <div className="flex justify-center flex-wrap gap-x-16 gap-y-12">
+        {integrations.map(({ Icon, color, name }, i) => (
+          <div
+            key={i}
+            className="flex items-center justify-center transition-transform duration-300 hover:scale-110"
+          >
+            <Icon size={42} color={color} title={name} />
+          </div>
+        ))}
+      </div>
     </div>
 
-    {/* Fiverr */}
-    <div className="text-slate-700 font-black text-3xl tracking-tighter">
-      fiverr<span className="text-emerald-500">.</span>
-    </div>
-
-    {/* Gmail */}
-    <div className="flex items-center gap-2 text-slate-700">
-      <svg className="h-6 fill-current" viewBox="0 0 24 24">
-        <path d="M24 5.457v13.909c0 .904-.732 1.635-1.636 1.635h-3.819V11.73L12 16.38l-6.545-4.65v9.27H1.636A1.638 1.638 0 0 1 0 19.366V5.457c0-1.356 1.509-2.154 2.622-1.383L12 10.704l9.378-6.63C22.49 3.303 24 4.101 24 5.457z"/>
-      </svg>
-      <span className="font-semibold text-xl tracking-tight">Gmail</span>
-    </div>
-
-    {/* Outlook */}
-    <div className="flex items-center gap-2 text-slate-700">
-      <svg className="h-7 fill-current" viewBox="0 0 24 24">
-        <path d="M12 0L1.606 1.833v20.334L12 24V0zm.938 2.438L22.394 4.33v15.34l-9.456 1.891V2.438zM5.312 8.438v1.874h1.876V8.438H5.312zm0 3.125v1.876h1.876v-1.876H5.312zm0 3.124v1.876h1.876v-1.876H5.312z"/>
-      </svg>
-      <span className="font-bold text-xl tracking-tight">Outlook</span>
-    </div>
-    
-  </div>
-</div>
 
       <style jsx>{`
         @keyframes blob {

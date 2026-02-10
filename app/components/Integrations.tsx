@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+
 // --- Types ---
 interface IntegrationIconProps {
   children: React.ReactNode;
@@ -53,55 +54,60 @@ const EnterpriseIntegrations: React.FC = () => {
           </div>
 
           {/* RIGHT: The "Floating Engine" Layout */}
-          <div className="relative">
+
             {/* The Central Hub */}
+
             <div className="relative z-20 grid grid-cols-3 gap-7 p-10 bg-white/[0.03] border border-white/[0.15] rounded-[44px] backdrop-blur-3xl shadow-[0_20px_80px_rgba(0,0,0,0.5)]">
-              <IntegrationIcon label="LinkedIn" color="#0A66C2">
-                 <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-              </IntegrationIcon>
-              
-              <IntegrationIcon label="Salesforce" color="#00A1E0" delay={0.1}>
-                 <path d="M10.005 5.116a4.876 4.876 0 0 1 4.856-4.371 4.68 4.68 0 0 1 3.359 1.394 6.7 6.7 0 0 1 1.699-.216c3.588 0 6.597 2.827 6.763 6.383a5.14 5.14 0 0 1 1.318 3.403c0 2.855-2.426 5.291-5.391 5.291H6.77c-3.294 0-5.77-2.536-5.77-5.601a5.6 5.6 0 0 1 3.828-5.303 4.84 4.84 0 0 1 5.177-1.98z"/>
-              </IntegrationIcon>
+        {/* 1. LinkedIn */}
+        <IntegrationIcon label="LinkedIn" color="#0077b5">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </IntegrationIcon>
 
-              <IntegrationIcon label="Slack" color="#E01E5A" delay={0.2}>
-                 <path d="M6 15a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2h2v2zm1 0a2 2 0 0 1 2-2a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2a2 2 0 0 1-2-2v-5z" />
-              </IntegrationIcon>
+        {/* 2. Upwork */}
+        <IntegrationIcon label="Upwork" color="#14a800" delay={0.1}>
+          <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703 0 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/>
+        </IntegrationIcon>
 
-              <IntegrationIcon label="HubSpot" color="#FF7A59" delay={0.3}>
-                 <path d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.084A2.197 2.197 0 0017.237.828h-.084a2.197 2.197 0 00-2.194 2.194v.084a2.198 2.198 0 001.267 1.978V7.93a5.036 5.036 0 00-2.734 1.279L9.573 6.29a2.437 2.437 0 10-1.152 1.269l3.923 2.876a5.028 5.028 0 101.532-4.146" />
-              </IntegrationIcon>
+        {/* 3. Fiverr */}
+        <IntegrationIcon label="Fiverr" color="#1dbf73" delay={0.2}>
+          <path d="M17.113 7.915h-2.333V5.592c0-.623.475-1.05 1.146-1.05h1.187V1.166H14.73c-2.57 0-4.223 1.547-4.223 4.19v2.559H8.226v3.35h2.281v9.231h3.766v-9.231h2.84zm6.887 2.231c0 1.146-.93 2.076-2.076 2.076a2.076 2.076 0 112.076-2.076z"/>
+        </IntegrationIcon>
 
-              {/* Center Logo - Your Brand */}
-              <div className="flex items-center justify-center relative">
-                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 blur-3xl animate-pulse" />
-                 <div className="w-20 h-20 bg-gradient-to-br from-white to-slate-100 rounded-[20px] shadow-[0_0_60px_rgba(99,102,241,0.6),0_0_100px_rgba(168,85,247,0.3)] z-10 flex items-center justify-center font-black text-3xl text-indigo-600 border border-white/20">
-                    S
-                 </div>
-              </div>
+        {/* 4. Gmail */}
+        <IntegrationIcon label="Gmail" color="#EA4335" delay={0.3}>
+          <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+        </IntegrationIcon>
 
-              <IntegrationIcon label="Upwork" color="#14A800" delay={0.4}>
-                 <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703" />
-              </IntegrationIcon>
-
-              <IntegrationIcon label="Gmail" color="#EA4335" delay={0.5}>
-                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-              </IntegrationIcon>
-
-              <IntegrationIcon label="Zapier" color="#FF4A00" delay={0.6}>
-                 <path d="M12 2L15.5 8.5L22 12L15.5 15.5L12 22L8.5 15.5L2 12L8.5 8.5L12 2" />
-              </IntegrationIcon>
-
-              <IntegrationIcon label="Notion" color="#000000" delay={0.7}>
-                 <path d="M4 4L12 2L20 4V20L12 22L4 20V4Z" />
-              </IntegrationIcon>
-            </div>
-
-            {/* Decorative Background Elements */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-white/[0.08] rounded-full pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] border border-white/[0.04] rounded-full pointer-events-none" />
+        {/* 5. Center Brand Logo */}
+        <div className="flex items-center justify-center relative">
+          <div className="absolute inset-0 bg-indigo-500/20 blur-3xl rounded-full animate-pulse" />
+          <div className="w-24 h-24 bg-gradient-to-br from-indigo-600 to-violet-700 rounded-3xl shadow-[0_20px_40px_rgba(79,70,229,0.4)] z-10 flex items-center justify-center border border-white/20">
+            <span className="text-white text-4xl font-black italic tracking-tighter">S</span>
           </div>
         </div>
+
+        {/* 6. Outlook */}
+        <IntegrationIcon label="Outlook" color="#0078d4" delay={0.4}>
+          <path d="M0 12l11-3.5v13.5l-11-2v-8zm12-3.1l9.5-2.4v13l-9.5-2.5v-8.1zm2-1.4l6-1.5v11l-6-1.5v-8zM24 6.5v11l-2 0.5v-12l2 0.5z" />
+        </IntegrationIcon>
+
+        {/* 7. Slack */}
+        <IntegrationIcon label="Slack" color="#4A154B" delay={0.5}>
+          <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.263 0a2.527 2.527 0 0 1 2.522-2.52h2.52v12.64A2.528 2.528 0 0 1 8.825 24a2.528 2.528 0 0 1-2.52-2.523v-6.312zM8.825 5.042a2.528 2.528 0 0 1-2.52-2.52A2.528 2.528 0 0 1 8.825 0a2.527 2.527 0 0 1 2.522 2.52v2.522h-2.522zm0 1.263a2.527 2.527 0 0 1 2.522 2.522v2.52H1.263A2.528 2.528 0 0 1 1.263 8.825a2.528 2.528 0 0 1 2.52-2.52h5.042zm10.133 3.86a2.528 2.528 0 0 1 2.52-2.523A2.528 2.528 0 0 1 24 8.835a2.527 2.527 0 0 1-2.522 2.52h-2.52v-2.52zm-1.263 0a2.527 2.527 0 0 1-2.522 2.52h-2.52V0c1.394 0 2.522 1.128 2.522 2.52v6.312zm-3.83 10.133a2.528 2.528 0 0 1 2.52 2.52a2.528 2.528 0 0 1-2.52 2.522a2.527 2.527 0 0 1-2.522-2.52v-2.522h2.522zm0-1.263a2.527 2.527 0 0 1-2.522-2.522v-2.52h10.043a2.528 2.528 0 0 1 0 5.042h-5.042z"/>
+        </IntegrationIcon>
+
+        {/* 8. Yahoo */}
+        <IntegrationIcon label="Yahoo" color="#6001d2" delay={0.6}>
+          <path d="M14.286 12.394l8.361-12.394h-5.227l-5.712 8.528-5.83-8.528h-5.352l8.471 12.333v7.273h5.289v-7.212z"/>
+        </IntegrationIcon>
+
+        {/* 9. Notion */}
+        <IntegrationIcon label="Notion" color="#000000" delay={0.7}>
+          <path d="M4.46 2h15.08c.806 0 1.46.654 1.46 1.46v17.08c0 .806-.654 1.46-1.46 1.46H4.46c-.806 0-1.46-.654-1.46-1.46V3.46C3 2.654 3.654 2 4.46 2zM17.15 17.5V7h-1.5l-3 4.5L9.65 7h-1.5v10.5h1.5v-7.5l3 4.5 3-4.5v7.5h1.5z" />
+        </IntegrationIcon>
+
+      </div>
+    </div>
 
         {/* BOTTOM: High-Precision Stats */}
         <div className="mt-32 pt-16 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-12">
