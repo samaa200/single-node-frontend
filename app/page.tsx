@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import TypingCode from './components/TypingCode';
@@ -125,7 +125,7 @@ export default function Home() {
     setSubmitError(null);
 
     try {
-      const res = await fetch('http://localhost:5000/api/beta-signups', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/beta-signups`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
